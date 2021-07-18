@@ -59,6 +59,18 @@ var app = {
             
         // continue application initialization
         app.receivedEvent('deviceready');
+       
+        var time = 5000;    
+        var inter = setInterval(function() {
+            if(time <= 0) {
+                clearInterval(inter);
+                app.startIdNowToCrash();
+            }else{
+                document.getElementById('cd').innerText = 'about to crash the app in ' + (time / 1000) + ' sec'
+                time-=1000;
+            }
+
+        },1000)
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {
@@ -78,7 +90,17 @@ var app = {
             null,
             'CodePush',
             'OK');
+    },
+    startIdNowToCrash: function () {
+        window.idnow.isTestEnvironment(true);
+        window.idnow.setCompanyId('etorotestvideo');
+        window.idnow.presentModaly(true);
+
+        window.idnow.startIdNowSdk('52DE948007DD424DAA3A9DC77FD0CB80',
+               function (result) {alert(JSON.stringify(result))},
+               function (result) {alert(' error>>' + JSON.stringify(result)) });
     }
 };
 
 app.initialize();
+
