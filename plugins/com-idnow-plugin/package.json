@@ -1,0 +1,48 @@
+{
+  "_args": [
+    [
+      "com-idnow-plugin@0.0.41",
+      "/Users/tdevere/Documents/GitHub/cordova-test-app"
+    ]
+  ],
+  "_development": true,
+  "_from": "com-idnow-plugin@0.0.41",
+  "_id": "com-idnow-plugin@0.0.41",
+  "_inBundle": false,
+  "_integrity": "sha512-xA+Mi4iILs2VjkwH9SKOMTvxrmd9MYWgbM0xLHmRQCNK1O0jwVinmvnfZkTbWFust7Tc4kxXmitOtuiihtIAMw==",
+  "_location": "/com-idnow-plugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "com-idnow-plugin@0.0.41",
+    "name": "com-idnow-plugin",
+    "escapedName": "com-idnow-plugin",
+    "rawSpec": "0.0.41",
+    "saveSpec": null,
+    "fetchSpec": "0.0.41"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/com-idnow-plugin/-/com-idnow-plugin-0.0.41.tgz",
+  "_spec": "0.0.41",
+  "_where": "/Users/tdevere/Documents/GitHub/cordova-test-app",
+  "author": "",
+  "cordova": {
+    "id": "com-idnow-plugin",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "description": "IdNow cordova plugin that exposes the idnow sdk ",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "license": "ISC",
+  "name": "com-idnow-plugin",
+  "version": "0.0.41"
+}

@@ -96,7 +96,7 @@ var app = {
         window.idnow.setCompanyId('etorotestvideo');
         window.idnow.presentModaly(true);
 
-        window.idnow.startIdNowSdk('52DE948007DD424DAA3A9DC77FD0CB80',
+        window.idnow.startIdNowSdk('replace_me',
                function (result) {alert(JSON.stringify(result))},
                function (result) {alert(' error>>' + JSON.stringify(result)) });
     }

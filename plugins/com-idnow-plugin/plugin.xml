@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com-idnow-plugin" version="0.0.41" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>IdNow</name>
+  <js-module name="IdNow" src="www/IdNow.js">
+    <clobbers target="idnow" />
+  </js-module>
+  <platform name="ios">
+  <preference name="CAMERA_USAGE_DESCRIPTION" default="Needs camera access for video streaming and identification."/>
+      <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+          <string>$CAMERA_USAGE_DESCRIPTION</string>
+      </config-file>
+
+      <preference name="MICROPHONE_USAGE_DESCRIPTION" default="Needs microphone access for video identification"/>
+      <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+          <string>$MICROPHONE_USAGE_DESCRIPTION</string>
+      </config-file>
+   <podspec>
+         <config>
+                 <source url="https://cdn.cocoapods.org/"/>
+         </config>
+          <pods use-frameworks="true">
+             <pod name="AppCenter" spec="~> 2.0.1" />
+             <pod name="IDnowSDK" spec="4.5.1" />
+         </pods>
+    </podspec>
+    <config-file target="config.xml" parent="/*">
+      <feature name="IdNow">
+        <param name="ios-package" value="IdNow" />
+      </feature>
+    </config-file>
+    <source-file src="src/ios/IdNow.swift" />
+  </platform>
+  <platform name="android">
+  <config-file parent="/*" target="AndroidManifest.xml" mode="merge">
+          <uses-permission android:name="android.permission.CAMERA" />
+          <uses-permission android:name="android.permission.RECORD_AUDIO" />
+      </config-file>
+  <framework src="idnow.gradle" custom="true" type="gradleReference" />
+  <resource-file src="archive/idnow-android-sdk-4.1.6.aar" target="libs/idnow-android-sdk-4.1.6.aar" />
+      <config-file target="config.xml" parent="/*">
+          <feature name="IdNow">
+              <param name="android-package" value="com.example.IdNow" />
+          </feature>
+      </config-file>4
+      <source-file src="src/android/IdNow.java" target-dir="src/android" />
+  </platform>
+</plugin>

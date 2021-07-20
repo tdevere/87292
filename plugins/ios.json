@@ -7,10 +7,15 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
+    "com-idnow-plugin": {
+      "CAMERA_USAGE_DESCRIPTION": "Needs camera access for video streaming and identification.",
+      "MICROPHONE_USAGE_DESCRIPTION": "Needs microphone access for video identification",
       "PACKAGE_NAME": "com.example.hello"
     },
     "cordova-plugin-code-push": {
+      "PACKAGE_NAME": "com.example.hello"
+    },
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.example.hello"
     }
   },
@@ -18,16 +23,16 @@
     "code-push": {
       "PACKAGE_NAME": "com.example.hello"
     },
-    "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "com.example.hello"
-    },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.example.hello"
-    },
     "cordova-plugin-file": {
       "PACKAGE_NAME": "com.example.hello"
     },
     "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.example.hello"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.example.hello"
+    },
+    "cordova-plugin-device": {
       "PACKAGE_NAME": "com.example.hello"
     },
     "cordova-plugin-zip": {
